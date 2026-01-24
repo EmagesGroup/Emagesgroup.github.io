@@ -5,225 +5,206 @@
   <title>Emages Group | Soluciones Integrales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Estilos -->
   <style>
-    :root {
-      --azul: #0E2A47;
-      --azul2: #1E4E79;
-      --dorado: #C9A24D;
-      --blanco: #FFFFFF;
-      --negro: #0B0B0B;
+    :root{
+      --azul:#0E2A47;
+      --dorado:#C9A24D;
+      --blanco:#ffffff;
+      --negro:#0B0B0B;
+      --gris:#f5f5f5;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
     }
 
-    body {
-      background: var(--blanco);
-      color: var(--negro);
-      line-height: 1.6;
+    body{
+      background:var(--blanco);
+      color:var(--negro);
+      line-height:1.6;
     }
 
-    /* HERO */
-    header {
-      background: linear-gradient(135deg, var(--azul), var(--azul2));
-      color: var(--blanco);
-      padding: 80px 20px;
-      text-align: center;
+    /* ===== HERO ===== */
+    .hero{
+      height:100vh;
+      background:
+        linear-gradient(rgba(14,42,71,.75), rgba(14,42,71,.75)),
+        url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
     }
 
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
+    .hero h1{
+      font-size:3rem;
+      letter-spacing:2px;
     }
 
-    header p {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+    .hero span{
+      color:var(--dorado);
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 30px;
-      background: var(--dorado);
-      color: var(--azul);
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
+    .hero p{
+      margin:20px auto;
+      max-width:700px;
+      font-size:1.2rem;
     }
 
-    /* SECCIONES */
-    section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
+    .btn{
+      display:inline-block;
+      margin-top:25px;
+      padding:14px 32px;
+      background:var(--dorado);
+      color:var(--negro);
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:30px;
     }
 
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--azul);
-      font-size: 2.2rem;
+    /* ===== SECCIONES ===== */
+    section{
+      padding:80px 20px;
+      max-width:1200px;
+      margin:auto;
     }
 
-    /* UNIDADES */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+    h2{
+      text-align:center;
+      margin-bottom:50px;
+      color:var(--azul);
     }
 
-    .card {
-      border: 1px solid #eee;
-      border-radius: 15px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    /* ===== SERVICIOS ===== */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
 
-    .card h3 {
-      color: var(--azul);
-      margin-bottom: 10px;
+    .card{
+      background:var(--gris);
+      padding:30px;
+      border-radius:16px;
+      text-align:center;
     }
 
-    .card p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
+    .card h3{
+      color:var(--azul);
+      margin-bottom:15px;
     }
 
-    .card span {
-      font-size: 0.9rem;
-      color: var(--azul2);
-      font-weight: bold;
+    .card p{
+      font-size:0.95rem;
     }
 
-    /* DIFERENCIAL */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
+    .card span{
+      display:block;
+      margin-top:10px;
+      color:var(--dorado);
+      font-weight:bold;
     }
 
-    .feature {
-      padding: 20px;
-      background: #f8f8f8;
-      border-radius: 10px;
+    /* ===== CONTACTO ===== */
+    .contact{
+      background:var(--azul);
+      color:white;
+      text-align:center;
+      padding:60px 20px;
     }
 
-    /* CONTACTO */
-    .contact {
-      background: var(--azul);
-      color: var(--blanco);
-      text-align: center;
-      border-radius: 20px;
+    .contact p{
+      margin:8px 0;
     }
 
-    .contact p {
-      margin: 10px 0;
+    /* ===== FOOTER ===== */
+    footer{
+      background:var(--negro);
+      color:white;
+      text-align:center;
+      padding:20px;
+      font-size:0.85rem;
     }
 
-    /* FOOTER */
-    footer {
-      background: var(--negro);
-      color: var(--blanco);
-      text-align: center;
-      padding: 20px;
-      font-size: 0.85rem;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 18px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 22px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    /* ===== WHATSAPP ===== */
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 4px 10px rgba(0,0,0,.3);
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>EMAGES GROUP</h1>
-    <p>Ecosistema empresarial que crea, integra y escala soluciones educativas, comerciales y estratégicas.</p>
-    <a href="#contacto" class="btn">Contáctanos</a>
-  </header>
-
-  <!-- QUIENES SOMOS -->
-  <section>
-    <h2>Quiénes Somos</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Emages Group es un ecosistema empresarial peruano con proyección global, enfocado en crear, integrar y escalar marcas y soluciones que generan valor real para personas y empresas.
+<!-- HERO -->
+<header class="hero">
+  <div>
+    <h1><span>EMAGES</span> GROUP</h1>
+    <p>
+      Ecosistema de soluciones estratégicas en educación, marketing e imagen
+      para empresas que buscan crecer con propósito.
     </p>
-  </section>
+    <a href="#contacto" class="btn">Contáctanos</a>
+  </div>
+</header>
 
-  <!-- UNIDADES -->
-  <section>
-    <h2>Unidades de Negocio</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>GRAVIA</h3>
-        <p>Educación, capacitación empresarial y desarrollo de talento.</p>
-        <span>gravia@emagesgroup.com</span>
-      </div>
+<!-- SERVICIOS -->
+<section>
+  <h2>Soluciones de Emages Group</h2>
 
-      <div class="card">
-        <h3>IDEG</h3>
-        <p>Marketing estratégico, publicidad y comunicación digital.</p>
-        <span>ideg@emagesgroup.com</span>
-      </div>
-
-      <div class="card">
-        <h3>AYVÉ</h3>
-        <p>Imagen corporativa, visibilidad y posicionamiento profesional.</p>
-        <span>ayve@emagesgroup.com</span>
-      </div>
+  <div class="services">
+    <div class="card">
+      <h3>GRAVIA</h3>
+      <p>Educación y capacitación estratégica para el desarrollo profesional.</p>
+      <span>gravia@emagesgroup.com</span>
     </div>
-  </section>
 
-  <!-- DIFERENCIAL -->
-  <section>
-    <h2>Nuestro Enfoque</h2>
-    <div class="features">
-      <div class="feature">Estrategia personalizada</div>
-      <div class="feature">Creatividad con propósito</div>
-      <div class="feature">Visión de ecosistema</div>
-      <div class="feature">Resultados medibles</div>
+    <div class="card">
+      <h3>IDEG</h3>
+      <p>Marketing, publicidad y posicionamiento de marca.</p>
+      <span>ideg@emagesgroup.com</span>
     </div>
-  </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contact">
-    <h2>Contacto</h2>
-    <p>📩 hola@emagesgroup.com</p>
-    <p>📩 gravia@emagesgroup.com</p>
-    <p>📩 ideg@emagesgroup.com</p>
-    <p>📩 ayve@emagesgroup.com</p>
-  </section>
+    <div class="card">
+      <h3>AYVÉ</h3>
+      <p>Imagen corporativa, visibilidad y presencia de marca.</p>
+      <span>ayve@emagesgroup.com</span>
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Emages Group · Todos los derechos reservados
-  </footer>
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+  <h2 style="color:white;">Contacto</h2>
+  <p>📧 hola@emagesgroup.com</p>
+  <p>📍 Perú</p>
+</section>
 
-  <!-- WHATSAPP -->
-  <a class="whatsapp" href="https://wa.me/51930175586" target="_blank">💬</a>
+<footer>
+  © 2026 Emages Group · Todos los derechos reservados
+</footer>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/51930175586" target="_blank">💬</a>
 
 </body>
 </html>
